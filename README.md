@@ -1,5 +1,11 @@
 # Pair Programming Challenge - Rails Pumpkin Carver
 
+Today we're building a website dedicated to pumpkin carving tourism on farms. Someone already built a way to add and view farms however they decided to retire to a quiet bucolic life before they could finish. It's up to you to complete the website by adding a page to show off carved pumpkins and some validations to make sure only valid pumpkin farms get added.
+
+## Getting Started
+
+You already have several routes and views for farms as well as a model. Farms already have several attributes. You won't need to do any work on the controller or views to make validations work, although you can change anything to your liking.
+
 Farms have these attributes:
 
 ```
