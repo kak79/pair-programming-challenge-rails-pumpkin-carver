@@ -1,3 +1,69 @@
-// Place all the styles related to the farms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-image: url("https://www.gotolouisville.com/imager/s3_us-east-1_amazonaws_com/louisville-2019/images/page-images/lcvb-jackspectac13-pearl_02_4739c54e174f66b55f651ecc1534086d.jpg");
+  background-repeat: no-repeat;
+  padding-top: 2em;
+
+  * {
+    color: white;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  input {
+    background: black;
+    color: white;
+    display: block;
+  }
+
+  p {
+    background: black;
+    border-radius: 4px;
+  }
+}
+
+.flash-message {
+  background-color: black;
+  border: solid green 2px;
+  color: green;
+}
+
+.flash-error {
+  background-color: black;
+  border: solid red 2px;
+  color: red;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 1s;
+  width: 3em;
+  height: 1em;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-right: solid white 2px;
+  border-bottom: solid white 2px;
+  border-radius: 0 0 5px 0;
+
+  a {
+    color: white;
+    padding-left: 1em;
+    text-decoration: none;
+  }
+
+  span {
+    cursor: default;
+  }
+}
+
+nav:hover {
+  width: 40em;
+}

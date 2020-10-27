@@ -11,11 +11,21 @@
 
   <body>
 
-    <% flash[:messages].each do |msg| %>
+    <div id="background-mask"></div>
+
+    <nav>
+      <span>Menu</span>
+      <%= link_to "All Farms", farms_path %>
+      <%= link_to "Create a Farm", new_farm_path %>
+      <%= link_to "Pumpkins Showcase", "/pumpkins" %>
+      <%= link_to "Submit A Pumpkin", "/pumpkins/new" %>
+    </nav>
+
+    <% flash[:messages]&.each do |msg| %>
       <p class="flash-message"><%= msg %></p>
     <% end %>
 
-    <% flash[:errors].each do |err| %>
+    <% flash[:errors]&.each do |err| %>
       <p class="flash-error"><%= err %></p>
     <% end %>
 
