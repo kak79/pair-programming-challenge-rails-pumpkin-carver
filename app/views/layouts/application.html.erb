@@ -10,6 +10,15 @@
   </head>
 
   <body>
+
+    <% flash[:messages].each do |msg| %>
+      <p class="flash-message"><%= msg %></p>
+    <% end %>
+
+    <% flash[:errors].each do |err| %>
+      <p class="flash-error"><%= err %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
