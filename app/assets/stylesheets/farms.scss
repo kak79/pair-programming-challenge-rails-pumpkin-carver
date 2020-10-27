@@ -1,6 +1,7 @@
 body {
   background-image: url("https://www.gotolouisville.com/imager/s3_us-east-1_amazonaws_com/louisville-2019/images/page-images/lcvb-jackspectac13-pearl_02_4739c54e174f66b55f651ecc1534086d.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding-top: 2em;
 
   * {
@@ -18,9 +19,12 @@ body {
     display: block;
   }
 
-  p {
+  h1,h2,h3,h4,h5,h6,p {
+    text-align: center;
     background: black;
     border-radius: 4px;
+    padding: 1em;
+    display: block;
   }
 }
 
@@ -28,12 +32,16 @@ body {
   background-color: black;
   border: solid green 2px;
   color: green;
+  display: inline-block;
+  padding: 1em;
 }
 
 .flash-error {
   background-color: black;
   border: solid red 2px;
   color: red;
+  display: inline-block;
+  padding: 1em;
 }
 
 nav {
@@ -53,17 +61,26 @@ nav {
   border-bottom: solid white 2px;
   border-radius: 0 0 5px 0;
 
-  a {
-    color: white;
-    padding-left: 1em;
-    text-decoration: none;
-  }
-
   span {
     cursor: default;
   }
 }
 
+a {
+  padding-left: 1em;
+  text-decoration: none;
+}
+
 nav:hover {
   width: 40em;
+}
+
+img {
+  width: 80vw;
+  height: 40vh;
+  object-fit: cover;
+  margin: auto;
+  border: solid black 4px;
+  border-radius: 5px;
+  margin-left: 9vw;
 }
