@@ -1,0 +1,7 @@
+<% @farms.each do |farm| %>
+
+  <div class="farm-card" style="background-image: <%= farm.img_url %>;">
+    <%= link_to farm.name, farm_path(farm) %>
+  </div>
+
+<% end %>
