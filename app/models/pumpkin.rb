@@ -6,13 +6,8 @@ class Pumpkin < ApplicationRecord
 
   validates :color, presence: true, inclusion: { in: %w(orange yellow white green) }
 
-  validates :size, presence: true, numericality: { less_than: 2, greater: 10 }
+  validates :size, presence: true, numericality: { less_than: 11, greater_than: 1 }
 
-  validate :img_url, presence: true, :validate_img
-  def validate_img
-    unless value =~ /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
-      errors.add(:img_url,"Is Not an Image")
-    end
-  end
+  validates :img_url, presence: true, format: { with: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/, message: "Is Not an Image" }
 
 end

@@ -8,11 +8,6 @@ class Farm < ApplicationRecord
 
   validates :description, presence: true, length: { minimum: 20, maximum: 100 }
 
-  validates :img_url, presence: true
-  validate :img_url, :validate_img
-    def validate_img
-      unless value =~ /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
-        errors.add(:img_url,"Is Not an Image")
-      end
-    end
+  validates :img_url, presence: true, format: { with: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/, message: "Is Not an Image" }
+
 end

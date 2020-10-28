@@ -1,2 +1,5 @@
 <h1>Pumpkin#index</h1>
-<p>Find me in app/views/pumpkin/index.html.erb</p>
+<% @pumpkins.each do |pumpkin| %>
+<h2><%= link_to pumpkin.name, pumpkin_path(pumpkin) %></h2>
+<p><%= image_tag(pumpkin.img_url) %></p>
+<p>Farm: <%= pumpkin.farm_id.name %></p>
