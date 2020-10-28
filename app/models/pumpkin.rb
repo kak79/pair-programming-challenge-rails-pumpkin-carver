@@ -2,11 +2,11 @@ class Pumpkin < ApplicationRecord
 
   belongs_to :farm
 
-  validates :name, presence: true, inclusion: { in: "jack o lantern" }
+  validates :name, presence: true
 
   validates :color, presence: true, inclusion: { in: %w(orange yellow white green) }
 
-  validates :size, presence: true, numericality: { less_than: 2, greater }
+  validates :size, presence: true, numericality: { less_than: 2, greater: 10 }
 
   validate :img_url, presence: true, :validate_img
   def validate_img
