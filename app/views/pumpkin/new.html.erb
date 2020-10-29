@@ -1,2 +1,26 @@
 <h1>Pumpkin#new</h1>
-<p>Find me in app/views/pumpkin/new.html.erb</p>
+<% if @pumpkin.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@pumpkin.errors.count, "error") %>
+      prohibited this post from being saved:
+    </h2>
+
+    <ul>
+    <% @pumpkin.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for @pumpkin do |f| %>
+  <%= f.label(:name) %>
+  <%= f.text_field :name %><br>
+  <%= f.label(:img_url) %>
+  <%= f.check_box :img_url %><br>
+  <%= f.label(:color) %>
+  <%= f.text_field :color %><br>
+  <%= f.label(:size) "1-10" %>
+  <%= f.text_field :size %><br>
+  <%= f.submit %>
+<% end %>

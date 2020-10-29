@@ -1,4 +1,4 @@
-class PumpkinController < ApplicationController
+class PumpkinsController < ApplicationController
   before_action :set_pumpkin, only: [:show, :edit, :update]
 
   def index
@@ -6,7 +6,7 @@ class PumpkinController < ApplicationController
   end
 
   def create
-    @pumpkin = pumpkin.new(pumpkin_params)
+    @pumpkin = Pumpkin.new(pumpkin_params)
 
     if @pumpkin.save
       redirect_to pumpkin_path(@pumpkin)
@@ -17,7 +17,7 @@ class PumpkinController < ApplicationController
   end
 
   def new
-    @pumpkin = pumpkin.new
+    @pumpkin = Pumpkin.new
   end
 
   private
