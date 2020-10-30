@@ -18,7 +18,6 @@ class FarmsController < ApplicationController
 
   def create
     @farm = Farm.new(farm_params)
-    byebug
     if @farm.save
       flash[:messages] = ["#{@farm.name} successfully created"]
       redirect_to farm_path(@farm)
