@@ -19,14 +19,16 @@
   <%= f.label(:img_url) %>
   <%= f.text_field :img_url %><br>
   <%= f.label(:orange) %>
-  <%= f.check_box :color %>
+  <%= f.radio_button :color, 'orange' %>
   <%= f.label(:yellow) %>
-  <%= f.check_box :color %>
+  <%= f.radio_button :color, 'yellow' %>
   <%= f.label(:white) %>
-  <%= f.check_box :color %>
+  <%= f.radio_button :color, 'white' %>
   <%= f.label(:green) %>
-  <%= f.check_box :color %><br> 
+  <%= f.radio_button :color, 'green' %><br>
   <%= f.label(:size) %>
-  <%= f.number_field :size %><br>
+  <%= f.number_field :size, in: 1..10 %><br>
+  <%= collection_select(:pumpkin, :farm_id, Farm.all, :id, :name, prompt: true) %>
+  <br><br>
   <%= f.submit %>
 <% end %>

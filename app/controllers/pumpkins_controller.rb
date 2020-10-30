@@ -27,6 +27,6 @@ class PumpkinsController < ApplicationController
   end
 
   def pumpkin_params
-  params.require(:pumpkin).permit(:name, :img_url, :color, :size)
+  params.require(:pumpkin).permit(:name, :img_url, :color, :size, :farm_id)
   end
 end
