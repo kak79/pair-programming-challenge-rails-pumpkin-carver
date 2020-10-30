@@ -17,10 +17,16 @@
   <%= f.label(:name) %>
   <%= f.text_field :name %><br>
   <%= f.label(:img_url) %>
-  <%= f.check_box :img_url %><br>
-  <%= f.label(:color) %>
-  <%= f.text_field :color %><br>
-  <%= f.label(:size) "1-10" %>
-  <%= f.text_field :size %><br>
+  <%= f.text_field :img_url %><br>
+  <%= f.label(:orange) %>
+  <%= f.check_box :color %>
+  <%= f.label(:yellow) %>
+  <%= f.check_box :color %>
+  <%= f.label(:white) %>
+  <%= f.check_box :color %>
+  <%= f.label(:green) %>
+  <%= f.check_box :color %><br> 
+  <%= f.label(:size) %>
+  <%= f.number_field :size %><br>
   <%= f.submit %>
 <% end %>

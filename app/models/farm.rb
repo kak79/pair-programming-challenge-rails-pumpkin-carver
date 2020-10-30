@@ -8,8 +8,6 @@ class Farm < ApplicationRecord
 
   validates :description, presence: true, length: { minimum: 20, maximum: 100 }
 
-  #causing error? Rails doesn't like the regex 
-
-  # validates :img_url, presence: true, format: { with: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/, message: "Is Not an Image" }
+  validates :img_url, presence: true
 
 end
