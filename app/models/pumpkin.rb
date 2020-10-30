@@ -8,5 +8,8 @@ class Pumpkin < ApplicationRecord
 
   validates :size, presence: true, numericality: { less_than: 11, greater_than: 1 }
 
-  validates :img_url, presence: true, format: { with: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/, message: "Is Not an Image" }
+  #causing error? Rails doesn't like the regex 
+
+  validates :img_url, presence: true
+  
 end
